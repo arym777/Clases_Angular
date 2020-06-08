@@ -1,1 +1,12 @@
-<p>parques works!</p>
+<h2>{{ nombre }} </h2>
+
+<ol>
+    <li>Metros: {{metros}}</li>
+    <li>Vegetación: {{vegetacion}}</li>
+    <li>
+        <span *ngIf="abierto;else cerrado">Abierto</span>
+        <ng-template #cerrado>Cerrado</ng-template>
+    </li>
+</ol>
+
+<button (click)="emitirEvento()">Mostrar en el padre</button>
