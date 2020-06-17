@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck, OnDestroy } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './parques.component.html',
   styleUrls: ['./parques.component.css']
 })
-export class ParquesComponent implements OnInit {
+export class ParquesComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
   @Input() nombre: string;
   @Input('metros_cuadrados') metros: number
   public vegetacion: string
@@ -22,6 +22,19 @@ export class ParquesComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    console.log('metodo onInit Lanzado');
+  }
+
+  ngDoCheck(){
+    console.log('DoCheck se ha ejecutado')
+  }
+
+  ngOnDestroy(){
+    console.log('Se elimina el componente')
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    console.log(changes)
   }
 
   emitirEvento(){
