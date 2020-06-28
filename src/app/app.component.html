@@ -2,5 +2,13 @@
   {{title}}
 </h1>
 
-<app-tienda></app-tienda>
+<a [routerLink] = "['/home']">Inicio</a>
+<a [routerLink] = "['/animals']">Animales</a>
+<a [routerLink] = "['/keepers']">Cuidadores</a>
+<a [routerLink] = "['/contact']">Contacto</a>
+<a [routerLink] = "['/tienda']">Tienda</a>
+<hr>
+<!--<app-tienda></app-tienda>-->
+
+<router-outlet></router-outlet>
 
