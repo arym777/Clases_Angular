@@ -1,1 +1,18 @@
-<h1>{{title}}</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">{{title}}</h1>
+        <p class="lead">Disfruta de los animales mas exoticos de nuestro zoologico</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" [routerLink]= "['/animals']">
+            Ver animales
+          </a>
+          <a class="btn btn-success btn-lg" [routerLink]= "['/keepers']">
+            Cuidadores
+          </a>
+          <a class="btn btn-warning btn-lg" [routerLink]= "['/contact']">
+            Contactanos
+          </a>
+        </p>
+    </div>
+</div>
+
